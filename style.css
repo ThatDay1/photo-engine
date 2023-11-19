@@ -28,11 +28,14 @@ header {
 }
 
 #header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 70px;
     padding: 0 20px;
+}
+
+#header, #result {
+    display: flex;
 }
 
 #header h2 {
@@ -45,7 +48,6 @@ header {
 }
 
 #search_box input {
-    width: 100%;
     font-size: 1rem;
     padding: 8px;
     border-radius: 25px;
@@ -54,19 +56,28 @@ header {
     border: 1px solid var(--near-white);
 }
 
+#search_box input, #result {
+    width: 100%;
+}
+
 #search_box input:focus {
-    color: var(--black);
     border: 3px solid var(--blue);
     box-shadow: 0 0 5px var(--white);
 }
 
-#search_box i {
+#search_box input:focus, #search_box i {
     color: var(--black);
+}
+
+#search_box i {
     position: absolute;
     top: 25%;
     right: 4%;
-    cursor: pointer;
     transition: 0.5s;
+}
+
+#search_box i, .img {
+    cursor: pointer;
 }
 
 #search_box i:hover {
@@ -74,8 +85,6 @@ header {
 }
 
 #result {
-    width: 100%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -88,7 +97,6 @@ header {
     background-position: center;
     background-size: cover;
     border-radius: 4px;
-    cursor: pointer;
 }
 
 @media (max-width:1280px) {
